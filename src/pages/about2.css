@@ -1,0 +1,79 @@
+/* .about {
+ 
+
+  padding:  20px;
+} */
+
+.hero {
+  text-align: center;
+  display: flex;
+ 
+  background: linear-gradient(to right,rgb(26, 19, 154), rgb(8, 5, 59));
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 24px;
+  opacity: 0.9;
+}
+
+.content {
+  padding: 20px;
+}
+
+.mission, .values, .team {
+  margin-bottom: 60px;
+}
+
+.mission h2, .values h2, .team h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 24px;
+  color: #0a1aca;
+  margin-bottom: 16px;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.team p {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
