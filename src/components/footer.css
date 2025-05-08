@@ -13,14 +13,8 @@
   min-width: 150px;
 }
 
-.footer-sec h2, .footer-section h3 {
+.footer-sec h2, .footer-sec h3 {
   margin-bottom: 8px;
-}
-
-.social-icons span {
-  margin-right: 10px;
-  font-size: 24px;
-  cursor: pointer;
 }
 
 .footer-bottom {

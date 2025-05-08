@@ -78,12 +78,7 @@
     color: #718096;
   }
   
-  .avatar {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-  }
-  
+
   .author {
     font-weight: 500;
     color: #2d3748;

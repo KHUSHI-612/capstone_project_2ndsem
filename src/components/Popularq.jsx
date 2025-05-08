@@ -78,7 +78,7 @@ const PopularQ = () => {
               ))}
             </div>
             <div className="questioninfo">
-              <img src={q.avatar} alt={q.author} className="avatar" />
+            
               <span className="author">{q.author}</span>
               <span className="time"> · {q.time}</span>
               <span className="stats">{q.votes} votes · {q.answers} answers · {q.views} views</span>
