@@ -17,9 +17,9 @@ return(
     <div>
     
   
-      <div className="home-hero">
+      <div className="hero">
     
-        <div className="home-content">
+        <div className="content">
           
         
 
@@ -31,25 +31,25 @@ return(
       <PopTopics />
       <PopularQ/>
 
-      <div className="community-section">
+      <div className="community">
   <h2>Our Growing Community</h2>
   <div className="community-grid">
-    <div className="stats-card" data-aos="fade-up">
+    <div className="card" >
       <div className="circle blue">1</div>
       <p>Questions</p>
       <h3>150,000+</h3>
     </div>
-    <div className="stats-card" data-aos="fade-up" data-aos-delay="100">
+    <div className="card"  >
       <div className="circle pink">2</div>
       <p>Answers</p>
       <h3>520,000+</h3>
     </div>
-    <div className="stats-card" data-aos="fade-up" data-aos-delay="200">
+    <div className="card" >
       <div className="circle green">3</div>
       <p>Users</p>
       <h3>75,000+</h3>
     </div>
-    <div className="stats-card" data-aos="fade-up" data-aos-delay="300">
+    <div className="card" >
       <div className="circle orange">4</div>
       <p>Daily Visitors</p>
       <h3>25,000+</h3>

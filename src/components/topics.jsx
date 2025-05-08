@@ -23,11 +23,11 @@ const PopTopics=()=>{
 
 
 return(
-    <div className="topics-section">
+    <div className="topicssec">
       <h2>Popular Topics</h2>
-      <div className="topic-container">
+      <div className="container">
         {visibleTopics.map((topic, index) => (
-          <div className="topic-card" key={index}>
+          <div className="card" key={index}>
             <span className="icon">{topic.icon}</span>
             <span className="name">{topic.name}</span>
             

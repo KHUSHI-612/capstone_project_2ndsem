@@ -1,11 +1,13 @@
+
 body, html {
   margin: 0;
   padding: 0;
   background-color: rgb(255, 255, 255);
 }
 
-.home-hero {
-  height: 60vh;
+
+.hero {
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,34 +17,20 @@ body, html {
   padding: 0 32px;
 }
 
-.home-content h1 {
+.content h1 {
   font-size: 48px; 
   margin-bottom: 16px;
-  /* margin-left: 90px; */
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
 }
 
-.home-content p {
+.content p {
   font-size: 20px; 
   margin-bottom: 32px;
-  /* margin-left: 90px; */
-}
-
-.text-section {
-  flex: 1;
-  text-align: left;
-  margin-left: 90px;
-}
-
-.home-hero-image {
-  flex: 2;
-}
-
-.home-hero-image img {
-  width: 150%;
-  max-width: 550px;
-  height: auto;
-  border-radius: 12px;
-  margin-left: 150px;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
 }
 
 .start-button {
@@ -55,13 +43,16 @@ body, html {
   border-radius: 8px;
   cursor: pointer;
   flex: auto;
-  
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
 }
 
 .start-button:hover {
   background-color: rgb(207, 207, 207);
   color: rgb(6, 1, 110);
 }
+
 
 @keyframes fadeInUp {
   from {
@@ -74,56 +65,43 @@ body, html {
   }
 }
 
-.home-content h1, 
-.home-content p,
-.start-button {
-  animation: fadeInUp 1s ease forwards;
-  opacity: 0;
-}
 
-
-.home-content h1 {
-  animation-delay: 0.2s;
-}
-.home-content p {
-  animation-delay: 0.4s;
-}
-.start-button {
-  animation-delay: 0.6s;
-}
-
-.community-section {
+.community {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 64px 32px;
   background-color: #f9f9f9;
 }
 
-.community-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+.community h2 {
+  font-size: 40px;
+  margin-bottom: 32px;
   font-weight: bold;
 }
 
 .community-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  gap: 32px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.stats-card {
+
+.card, .card {
   background-color: #fff;
-  padding: 2rem;
+  padding: 32px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.stats-card:hover {
+.card:hover, .card:hover {
   transform: scale(1.05);
 }
 
+.card{
+  background-color: #f9f9f9;
+}
 .circle {
   width: 50px;
   height: 50px;
@@ -133,7 +111,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  margin: 0 auto 16px;
 }
 
 .blue { background-color: #3f51b5; }
@@ -141,20 +119,23 @@ body, html {
 .green { background-color: #4caf50; }
 .orange { background-color: #ff9800; }
 
-.stats-card p {
-  font-size: 1.1rem;
+
+.card p {
+  font-size: 17.6px;
   color: #333;
 }
 
-.stats-card h3 {
-  font-size: 1.8rem;
+
+.card h3 {
+  font-size: 28.8px;
   color: #000;
 }
 
+
 .about-link {
   text-align: center;
-  margin: 2rem 0;
-  font-size: 1.2rem;
+  margin: 32px 0;
+  font-size: 19.2px;
   color: #0077cc;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -166,5 +147,6 @@ body, html {
 
 .about-link .arrow {
   font-weight: bold;
-  margin-left: 0.3rem;
+  margin-left: 4.8px;
 }
+
