@@ -1,79 +1,65 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './home.css';
-import PopTopics from '../components/topics.jsx';
-import PopularQ from '../components/Popularq.jsx';
-import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
+const Home = ({ isLoggedIn, onLoginClick }) => {
+  const navigate = useNavigate();
 
+  const handleStartAsking = () => {
+    if (isLoggedIn) {
+      navigate('/questions');
+    } else {
+      onLoginClick();
+    }
+  };
 
-import  Footer from '../components/Footer.jsx'
-
-
-
-const Home = () => {
-
-
-return(
-    <div>
-    
-  
+  return (
+    <div className="home">
       <div className="hero">
-    
-        <div className="content">
-          
-        
-
-          <h1>Ask. Answer. Learn.</h1>
-          <p>From everyday doubts to expert insights—discover, contribute, and thrive together</p>
-          <button className="start-button">Get Started</button>
+        <div className="hero-content">
+          <div className="hero-text">
+          <h1>Welcome to Qverse </h1>
+            <p>Ask questions, share knowledge, and learn together </p>
+            <button onClick={handleStartAsking} className="cta-button">
+              Start Asking
+            </button>
+          </div>
+          <div className="hero-image">
+            <img src="/src/assets/Connected world-rafiki.png" alt="Connected World" />
+          </div>
         </div>
       </div>
-      <PopTopics />
-      <PopularQ/>
 
-      <div className="community">
-  <h2>Our Growing Community</h2>
-  <div className="community-grid">
-    <div className="card" >
-      <div className="circle blue">1</div>
-      <p>Questions</p>
-      <h3>150,000+</h3>
+      <div className="features">
+        <div className="feature-card">
+          <h3>Ask Questions</h3>
+          <p>Get answers from our community of experts</p>
+        </div>
+        <div className="feature-card">
+          <h3>Share Knowledge</h3>
+          <p>Help others by answering their questions</p>
+        </div>
+        <div className="feature-card">
+          <h3>Learn & Grow</h3>
+          <p>Expand your knowledge through discussions</p>
+        </div>
+      </div>
+
+      <div className="trending">
+        <h2>Trending Topics</h2>
+        <div className="topic-grid">
+          <div className="topic-card">Technology</div>
+          <div className="topic-card">Science</div>
+          <div className="topic-card">Programming</div>
+          <div className="topic-card">Design</div>
+        </div>
+      </div>
+      <Footer/>
+
     </div>
-    <div className="card"  >
-      <div className="circle pink">2</div>
-      <p>Answers</p>
-      <h3>520,000+</h3>
-    </div>
-    <div className="card" >
-      <div className="circle green">3</div>
-      <p>Users</p>
-      <h3>75,000+</h3>
-    </div>
-    <div className="card" >
-      <div className="circle orange">4</div>
-      <p>Daily Visitors</p>
-      <h3>25,000+</h3>
-    </div>
-  </div>
-</div>
-
-
-<div className="about-link">
-  <Link to="/about">
-    <p>Know more about us <span className="arrow">→</span></p>
-  </Link>
-</div>
-
-<Footer/>
-    </div>
-
-
-
-
   );
-
 };
-
 
 export default Home;
 

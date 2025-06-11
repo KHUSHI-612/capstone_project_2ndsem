@@ -1,0 +1,244 @@
+.blog-container {
+  min-height: 100vh;
+  background: #000;
+  color: #e3e9f3;
+  padding-top: 80px;
+}
+
+.blog-hero {
+  background: #000;
+  padding: 64px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-hero h1 {
+  font-size: 56px;
+  color: #e3e9f3;
+  margin-bottom: 16px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.blog-hero .subtitle {
+  font-size: 21px;
+  color: #e3e9f3;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.blog-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 32px;
+}
+
+.blog-posts-section h2 {
+  font-size: 40px;
+  color: #e3e9f3;
+  text-align: center;
+  margin-bottom: 48px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.blog-posts-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(59,130,246,0.18);
+}
+
+.blog-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.blog-post-card {
+  background: #111111;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #0c386d;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  padding: 32px 24px 24px 24px;
+}
+
+.blog-post-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: #0c386d;
+}
+
+.blog-post-image {
+  display: none;
+}
+
+.blog-post-info {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-post-info h3 {
+  color: #e3e9f3;
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.blog-post-date {
+  color: #60a5fa;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.blog-post-excerpt {
+  color: #e3e9f3;
+  font-size: 18px;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.blog-post-link {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: auto;
+  transition: none;
+}
+
+.blog-post-link:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.blog-cta-section {
+  text-align: center;
+  background: #bdd4f9;
+  padding: 64px 32px;
+  border-radius: 16px;
+  border: 1px solid #3b82f6;
+  margin-top: 64px;
+}
+
+.blog-cta-section h2 {
+  font-size: 40px;
+  color: #23293a;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.blog-cta-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(59,130,246,0.18);
+}
+
+.blog-cta-section p {
+  font-size: 19px;
+  color: #23293a;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.blog-cta-button {
+  background: #3b82f6;
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 32px;
+  font-size: 19px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: none;
+  box-shadow: none;
+}
+
+.blog-cta-button:hover {
+  background: #60a5fa;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 1024px) {
+  .blog-hero h1 {
+    font-size: 45px;
+  }
+  .blog-hero .subtitle {
+    font-size: 18px;
+  }
+  .blog-posts-section h2,
+  .blog-cta-section h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    padding-top: 60px;
+  }
+  .blog-hero {
+    padding: 48px 16px;
+  }
+  .blog-hero h1 {
+    font-size: 35px;
+  }
+  .blog-content {
+    padding: 32px 16px;
+  }
+  .blog-posts-section,
+  .blog-cta-section {
+    margin-bottom: 32px;
+  }
+  .blog-posts-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .blog-cta-section {
+    padding: 32px 16px;
+  }
+  .blog-cta-button {
+    width: 100%;
+    padding: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-hero h1 {
+    font-size: 29px;
+  }
+  .blog-hero .subtitle {
+    font-size: 16px;
+  }
+  .blog-posts-section h2,
+  .blog-cta-section h2 {
+    font-size: 24px;
+  }
+  .blog-post-card {
+    padding: 24px;
+  }
+} 
