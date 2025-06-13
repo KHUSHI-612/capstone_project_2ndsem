@@ -365,7 +365,7 @@
 .faq-section {
   background: #111111;
   border-radius: 16px;
-  border: 1px solid #0c386d;
+  border: 1px solid #bdd4f9;
   margin-top: 64px;
   padding: 48px 32px;
   color: #e3e9f3;
@@ -388,9 +388,8 @@
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(59,130,246,0.18);
+
 }
 
 .faq-list {
@@ -402,11 +401,11 @@
 }
 
 .faq-item {
-  background: #111111;
+  background: #bdd4f9;
   border-radius: 16px;
-  border: 1px solid #0c386d;
+  border: 1px solid #000000;
   padding: 32px;
-  color: #e3e9f3;
+  color: #000000;
 }
 
 .faq-item h3 {
@@ -417,7 +416,7 @@
 }
 
 .faq-item p {
-  color: #cccccc;
+  color: #000000;
   font-size: 18px;
   line-height: 1.6;
 }
