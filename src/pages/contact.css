@@ -45,10 +45,10 @@
   background: #111111;
   padding: 24px;
   border-radius: 16px;
-  border: 1px solid #0c386d;
+  /* border: 1px solid #0c386d; */
   box-shadow: none;
   color: #e3e9f3;
-  transition: border 300ms, box-shadow 300ms;
+  /* transition: border 300ms, box-shadow 300ms; */
 }
 
 .info-card h3 {
@@ -67,10 +67,10 @@
   background: #111111;
   padding: 32px;
   border-radius: 16px;
-  border: 1px solid #0c386d;
+  /* border: 1px solid #0c386d; */
   box-shadow: none;
   color: #e3e9f3;
-  transition: border 300ms, box-shadow 300ms;
+  /* transition: border 300ms, box-shadow 300ms; */
 }
 
 .form-group {
@@ -88,9 +88,9 @@
 .form-group textarea {
   width: 100%;
   padding: 13px;
-  background: #23293a;
+  background: #bdd4f9;
   color: #fff;
-  border: 1px solid #3b82f6;
+  /* border: 1px solid #3b82f6; */
   border-radius: 8px;
   font-size: 16px;
   transition: border-color 300ms, box-shadow 300ms;
@@ -100,7 +100,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #60a5fa;
+  /* border-color: #60a5fa; */
   box-shadow: 0 0 0 2px rgba(59,130,246,0.13);
 }
 

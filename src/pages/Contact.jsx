@@ -19,7 +19,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
   };
 
@@ -38,11 +37,11 @@ const Contact = () => {
           </div>
           <div className="info-card">
             <h3>Call Us</h3>
-            <p>+1 (555) 123-4567</p>
+            <p>91 xxxxxxxxxx</p>
           </div>
           <div className="info-card">
             <h3>Office Location</h3>
-            <p>123 Tech Street<br />San Francisco, CA 94107</p>
+            <p>india<br />new delhi</p>
           </div>
         </div>
 
