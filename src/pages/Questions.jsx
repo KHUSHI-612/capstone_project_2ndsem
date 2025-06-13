@@ -9,7 +9,7 @@ const Questions = () => {
     {
       id: 1,
       title: "How to implement authentication in React?",
-      author: "John Doe",
+      author: "priya",
       votes: 42,
       answers: 5,
       tags: ["react", "authentication", "javascript"],
@@ -18,7 +18,7 @@ const Questions = () => {
     {
       id: 2,
       title: "Best practices for state management in large applications",
-      author: "Jane Smith",
+      author: "Jane",
       votes: 28,
       answers: 3,
       tags: ["react", "state-management", "redux"],
@@ -27,7 +27,7 @@ const Questions = () => {
     {
       id: 3,
       title: "Understanding React hooks and their use cases",
-      author: "Mike Johnson",
+      author: "xyz",
       votes: 35,
       answers: 7,
       tags: ["react", "hooks", "javascript"],
@@ -73,7 +73,7 @@ const Questions = () => {
     navigate(`/answers/${id}`);
   };
 
-  // Stack Exchange API search handler
+
   const handleSearch = async (e) => {
     e.preventDefault();
     setSearchLoading(true);
@@ -94,19 +94,18 @@ const Questions = () => {
 
   return (
     <div className="questions-container">
-      {/* Header Section */}
       <div className="questions-header">
         <h1>All Questions</h1>
       </div>
 
-      {/* Stack Exchange Search Bar and Ask Question Button Row */}
+   
       <div className="search-and-ask-row">
         <form onSubmit={handleSearch} className="se-search-bar">
           <input
             className="se-search-input"
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            placeholder="Search Stack Overflow..."
+            placeholder="search"
           />
           <button type="submit" className="se-search-btn">Search</button>
         </form>
@@ -130,7 +129,7 @@ const Questions = () => {
         ))}
       </ul>
 
-      {/* Add Question Modal/Card */}
+
       {showAddForm && (
         <div className="add-question-form">
           <h3>Ask a Question</h3>
@@ -170,7 +169,7 @@ const Questions = () => {
         </div>
       )}
 
-      {/* Local Question List */}
+
       <div className="questions-list">
         {questions.map(question => (
           <div key={question.id} className="question-card">
