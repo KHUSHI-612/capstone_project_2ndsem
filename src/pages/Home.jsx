@@ -26,7 +26,7 @@ const Home = ({ isLoggedIn, onLoginClick }) => {
             </button>
           </div>
           <div className="hero-image">
-            <img src="/src/assets/hero_image.png" alt="Hero" />
+            <img src="/hero_image.png" alt="Hero" />
           </div>
         </div>
       </div>
