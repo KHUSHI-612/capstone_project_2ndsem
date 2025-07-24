@@ -1,15 +1,15 @@
 :root {
   --bg-primary: #000000;
-  --bg-secondary: #0a0a0a;
-  --bg-tertiary: #111111;
+  --bg-secondary: #111111;
+  --bg-tertiary: #ffffff;
   --text-primary: #ffffff;
-  --text-secondary: #b3b3b3;
-  --accent-primary: #00ff00;
-  --accent-secondary: #00cc00;
-  --border-color: #1a1a1a;
-  --error-color: #ff3333;
-  --success-color: #00ff00;
-  --warning-color: #ffcc00;
+  --text-secondary: #cccccc;
+  --accent-primary: #ffffff;
+  --accent-secondary: #cccccc;
+  --border-color: #ffffff;
+  --error-color: #ffffff;
+  --success-color: #ffffff;
+  --warning-color: #ffffff;
 }
 
 * {
@@ -53,7 +53,7 @@ input, textarea, select {
   font-family: inherit;
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
-  color: var(--text-primary);
+  color: var(--bg-primary);
   padding: 12px 16px;
   border-radius: 8px;
   transition: all 300ms ease;
@@ -62,7 +62,7 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 2px rgba(0, 255, 0, 0.2);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
 input::placeholder, textarea::placeholder {
@@ -91,19 +91,19 @@ input::placeholder, textarea::placeholder {
 .btn:hover {
   background: var(--accent-secondary);
   transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .btn-secondary {
   background: var(--bg-tertiary);
-  color: var(--text-primary);
+  color: var(--bg-primary);
   border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
   background: var(--bg-secondary);
   border-color: var(--accent-primary);
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .card {
@@ -116,7 +116,7 @@ input::placeholder, textarea::placeholder {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
   border-color: var(--accent-primary);
 }
 
@@ -137,9 +137,9 @@ input::placeholder, textarea::placeholder {
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  background: var(--accent-primary);
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 768px) {

@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 32px;
   background: #000;
-  color: #e3e9f3;
+  color: #fff;
 }
 
 .contact-hero {
@@ -12,19 +12,19 @@
   background: #000;
   border-radius: 16px;
   margin-bottom: 64px;
-  color: #e3e9f3;
+  color: #fff;
 }
 
 .contact-hero h1 {
   font-size: 48px;
   margin-bottom: 16px;
   font-weight: 700;
-  color: #e3e9f3;
+  color: #fff;
 }
 
 .contact-hero p {
   font-size: 19px;
-  color: #e3e9f3;
+  color: #fff;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -42,35 +42,31 @@
 }
 
 .info-card {
-  background: #111111;
+  background: #fffefe;
   padding: 24px;
   border-radius: 16px;
-  /* border: 1px solid #0c386d; */
   box-shadow: none;
-  color: #e3e9f3;
-  /* transition: border 300ms, box-shadow 300ms; */
+  color: #ffffff;
 }
 
 .info-card h3 {
-  color: #3b82f6;
+  color: #000000;
   font-size: 19px;
   margin-bottom: 8px;
   font-weight: 600;
 }
 
 .info-card p {
-  color: #cccccc;
+  color: #000000;
   line-height: 1.6;
 }
 
 .contact-form {
-  background: #111111;
+  background: #fffefe;
   padding: 32px;
   border-radius: 16px;
-  /* border: 1px solid #0c386d; */
   box-shadow: none;
-  color: #e3e9f3;
-  /* transition: border 300ms, box-shadow 300ms; */
+  color: #fff;
 }
 
 .form-group {
@@ -80,7 +76,7 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: #b3b3b3;
+  color: #000000;
   font-weight: 500;
 }
 
@@ -88,25 +84,30 @@
 .form-group textarea {
   width: 100%;
   padding: 13px;
-  background: #bdd4f9;
-  color: #fff;
-  /* border: 1px solid #3b82f6; */
+  background: #000000;
+  color: #fffcfc;
   border-radius: 8px;
   font-size: 16px;
   transition: border-color 300ms, box-shadow 300ms;
   margin-bottom: 3px;
+  border: 1px solid #ccc;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #000000;
+  opacity: 1;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  /* border-color: #60a5fa; */
-  box-shadow: 0 0 0 2px rgba(59,130,246,0.13);
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.13);
 }
 
 .submit-btn {
-  background: #3b82f6;
-  color: #fff;
+  background: #000000;
+  color: #fffefe;
   border: none;
   padding: 16px 32px;
   border-radius: 8px;
@@ -114,12 +115,12 @@
   cursor: pointer;
   transition: background 200ms, box-shadow 200ms;
   width: 100%;
-  box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+  box-shadow: none;
   font-weight: 600;
 }
 
 .submit-btn:hover {
-  background: #60a5fa;
+  background: #ccc;
 }
 
 @media (max-width: 768px) {

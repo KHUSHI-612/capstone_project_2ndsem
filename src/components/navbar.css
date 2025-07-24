@@ -14,7 +14,7 @@
 }
 
 .nav-brand a {
-  color: #3b82f6;
+  color: #ffffff;
   font-size: 29px;
   font-weight: 700;
   text-decoration: none;
@@ -23,7 +23,7 @@
 }
 
 .nav-brand a:hover {
-  color: #60a5fa;
+  color: #f1f1f1;
   text-shadow: 0 0 15px rgba(59,130,246,0.25);
 }
 
@@ -78,27 +78,34 @@
 }
 
 .login-btn {
-  background: #3b82f6;
+  background: #fff;
   color: #000;
   border: none;
-  box-shadow: 0 0 15px rgba(59,130,246,0.18);
+  box-shadow: none;
+  padding: 11px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 
 .login-btn:hover {
-  background: #60a5fa;
+  background: #000;
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(59,130,246,0.25);
+  box-shadow: none;
 }
 
 .logout-btn {
-  background: #3b82f6;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   border: none;
   box-shadow: 0 2px 8px rgba(59,130,246,0.10);
 }
 
 .logout-btn:hover {
-  background: #60a5fa;
+  background: #5fa3f6;
   color: #fff;
 }
 
@@ -114,7 +121,7 @@
 
 .hamburger div {
   height: 3px;
-  background: #3b82f6;
+  background: #ffffff;
   border-radius: 2px;
   transition: all 300ms ease;
 }

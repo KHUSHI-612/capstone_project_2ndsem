@@ -1,7 +1,7 @@
 .blog-container {
   min-height: 100vh;
   background: #000;
-  color: #e3e9f3;
+  color: #fff;
   padding-top: 80px;
 }
 
@@ -15,7 +15,7 @@
 
 .blog-hero h1 {
   font-size: 56px;
-  color: #e3e9f3;
+  color: #fff;
   margin-bottom: 16px;
   font-weight: 700;
   position: relative;
@@ -24,7 +24,7 @@
 
 .blog-hero .subtitle {
   font-size: 21px;
-  color: #e3e9f3;
+  color: #fff;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -40,7 +40,7 @@
 
 .blog-posts-section h2 {
   font-size: 40px;
-  color: #e3e9f3;
+  color: #fff;
   text-align: center;
   margin-bottom: 48px;
   position: relative;
@@ -55,9 +55,9 @@
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  background: #fff;
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(59,130,246,0.18);
+  box-shadow: none;
 }
 
 .blog-posts-grid {
@@ -67,10 +67,10 @@
 }
 
 .blog-post-card {
-  background: #111111;
+  background: #111;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #0c386d;
+  border: 1px solid #fff;
   display: flex;
   flex-direction: column;
   box-shadow: none;
@@ -80,7 +80,7 @@
 .blog-post-card:hover {
   transform: none;
   box-shadow: none;
-  border-color: #0c386d;
+  border-color: #ccc;
 }
 
 .blog-post-image {
@@ -95,27 +95,27 @@
 }
 
 .blog-post-info h3 {
-  color: #e3e9f3;
+  color: #fff;
   font-size: 24px;
   margin-bottom: 8px;
   font-weight: 600;
 }
 
 .blog-post-date {
-  color: #60a5fa;
+  color: #ccc;
   font-size: 16px;
   margin-bottom: 8px;
 }
 
 .blog-post-excerpt {
-  color: #e3e9f3;
+  color: #fff;
   font-size: 18px;
   margin-bottom: 16px;
   flex: 1;
 }
 
 .blog-post-link {
-  color: #3b82f6;
+  color: #000;
   font-weight: 600;
   text-decoration: none;
   margin-top: auto;
@@ -123,22 +123,22 @@
 }
 
 .blog-post-link:hover {
-  color: #60a5fa;
+  color: #333;
   text-decoration: underline;
 }
 
 .blog-cta-section {
   text-align: center;
-  background: #bdd4f9;
+  background: #fff;
   padding: 64px 32px;
   border-radius: 16px;
-  border: 1px solid #3b82f6;
+  border: 1px solid #000;
   margin-top: 64px;
 }
 
 .blog-cta-section h2 {
   font-size: 40px;
-  color: #23293a;
+  color: #000;
   margin-bottom: 24px;
   position: relative;
   padding-bottom: 16px;
@@ -152,21 +152,21 @@
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  background: #000;
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(59,130,246,0.18);
+  box-shadow: none;
 }
 
 .blog-cta-section p {
   font-size: 19px;
-  color: #23293a;
+  color: #000;
   max-width: 600px;
   margin: 0 auto 32px;
   line-height: 1.6;
 }
 
 .blog-cta-button {
-  background: #3b82f6;
+  background: #000;
   color: #fff;
   padding: 16px 40px;
   border-radius: 32px;
@@ -179,7 +179,8 @@
 }
 
 .blog-cta-button:hover {
-  background: #60a5fa;
+  background: #333;
+  color: #fff;
   transform: none;
   box-shadow: none;
 }

@@ -19,14 +19,14 @@ const Home = ({ isLoggedIn, onLoginClick }) => {
       <div className="hero">
         <div className="hero-content">
           <div className="hero-text">
-          <h1>Welcome to Qverse </h1>
+          <h1>Welcome to <span className="q-pop">Q</span>verse </h1>
             <p>Ask questions, share knowledge, and learn together </p>
             <button onClick={handleStartAsking} className="cta-button">
               Start Asking
             </button>
           </div>
           <div className="hero-image">
-            <img src="/src/assets/Connected world-rafiki.png" alt="Connected World" />
+            <img src="/src/assets/hero_image.png" alt="Hero" />
           </div>
         </div>
       </div>
@@ -49,10 +49,38 @@ const Home = ({ isLoggedIn, onLoginClick }) => {
       <div className="trending">
         <h2>Trending Topics</h2>
         <div className="topic-grid">
-          <div className="topic-card">Technology</div>
-          <div className="topic-card">Science</div>
-          <div className="topic-card">Programming</div>
-          <div className="topic-card">Design</div>
+          <div className="topic-card">
+            <div className="card-inner">
+              <div className="card-front">Technology</div>
+              <div className="card-back">
+                <img src="/src/assets/tech.jpg" alt="Technology" />
+              </div>
+            </div>
+          </div>
+          <div className="topic-card">
+            <div className="card-inner">
+              <div className="card-front">Science</div>
+              <div className="card-back">
+                <img src="/src/assets/science.jpg" alt="Science" />
+              </div>
+            </div>
+          </div>
+          <div className="topic-card">
+            <div className="card-inner">
+              <div className="card-front">Programming</div>
+              <div className="card-back">
+                <img src="/src/assets/coding.jpg" alt="Programming" />
+              </div>
+            </div>
+          </div>
+          <div className="topic-card">
+            <div className="card-inner">
+              <div className="card-front">Design</div>
+              <div className="card-back">
+                <img src="/src/assets/design.jpg" alt="Design" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer/>
