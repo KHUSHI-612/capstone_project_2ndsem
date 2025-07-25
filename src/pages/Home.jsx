@@ -53,7 +53,7 @@ const Home = ({ isLoggedIn, onLoginClick }) => {
             <div className="card-inner">
               <div className="card-front">Technology</div>
               <div className="card-back">
-                <img src="/src/assets/tech.jpg" alt="Technology" />
+                <img src="/tech.jpg" alt="Technology" />
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ const Home = ({ isLoggedIn, onLoginClick }) => {
             <div className="card-inner">
               <div className="card-front">Science</div>
               <div className="card-back">
-                <img src="/src/assets/science.jpg" alt="Science" />
+                <img src="/science.jpg" alt="Science" />
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ const Home = ({ isLoggedIn, onLoginClick }) => {
             <div className="card-inner">
               <div className="card-front">Programming</div>
               <div className="card-back">
-                <img src="/src/assets/coding.jpg" alt="Programming" />
+                <img src="/coding.jpg" alt="Programming" />
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Home = ({ isLoggedIn, onLoginClick }) => {
             <div className="card-inner">
               <div className="card-front">Design</div>
               <div className="card-back">
-                <img src="/src/assets/design.jpg" alt="Design" />
+                <img src="/design.jpg" alt="Design" />
               </div>
             </div>
           </div>
