@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDVCnLbJ9TKpq2Bb139XmjNheu8uOard34",
-  authDomain: "qverse-app-1a628.firebaseapp.com",
-  projectId: "qverse-app-1a628",
-  storageBucket: "qverse-app-1a628.firebasestorage.app",
-  messagingSenderId: "208739490406",
-  appId: "1:208739490406:web:df985079877c763207eba7",
-  measurementId: "G-MVEF8QMJG2"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 
