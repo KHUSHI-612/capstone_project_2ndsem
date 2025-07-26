@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './questions.css';
+import { useEffect } from 'react';
 
 const Questions = () => {
   const navigate = useNavigate();
@@ -41,12 +42,18 @@ const Questions = () => {
     tags: ''
   });
 
-  // Stack Exchange API search state
+
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [searchLoading, setSearchLoading] = useState(false);
   const [searchError, setSearchError] = useState('');
   const [selectedSEQuestion, setSelectedSEQuestion] = useState(null);
+
+  useEffect(() => {
+    if (searchQuery === '') {
+      setSearchResults([]);
+    }
+  }, [searchQuery]);
 
   const handleAddQuestion = (e) => {
     e.preventDefault();
@@ -100,31 +107,31 @@ const Questions = () => {
 
    
       <div className="search-and-ask-row">
-        <form onSubmit={handleSearch} className="se-search-bar">
+        <form onSubmit={handleSearch} className="search-bar">
           <input
-            className="se-search-input"
+            className="search-input"
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             placeholder="search"
           />
-          <button type="submit" className="se-search-btn">Search</button>
+          <button type="submit" className="search-btn">Search</button>
         </form>
         <button className="ask-question-btn" onClick={() => setShowAddForm(true)}>+ Ask Question</button>
       </div>
-      {searchLoading && <div className="se-search-loading">Loading...</div>}
-      {searchError && <div className="se-search-error">{searchError}</div>}
-      <ul className="se-search-results">
+      {searchLoading && <div className="search-loading">Loading...</div>}
+      {searchError && <div className="search-error">{searchError}</div>}
+      <ul className="search-results">
         {searchResults.map(q => (
-          <li key={q.question_id} className="se-search-result-item">
+          <li key={q.question_id} className="search-result-item">
             <a
-              className="se-result-title-btn"
+              className="result-title-link"
               href={q.link}
               target="_blank"
               rel="noopener noreferrer"
             >
               {q.title}
             </a>
-            <span className="se-result-meta">Score: {q.score} | Answers: {q.answer_count}</span>
+            <span className="result-meta">Score: {q.score} | Answers: {q.answer_count}</span>
           </li>
         ))}
       </ul>

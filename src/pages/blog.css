@@ -114,18 +114,7 @@
   flex: 1;
 }
 
-.blog-post-link {
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
-  margin-top: auto;
-  transition: none;
-}
 
-.blog-post-link:hover {
-  color: #333;
-  text-decoration: underline;
-}
 
 .blog-cta-section {
   text-align: center;

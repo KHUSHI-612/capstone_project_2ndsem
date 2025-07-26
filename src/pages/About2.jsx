@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './about2.css';
 
 const About2 = () => {
+  const navigate = useNavigate();
   return (
     <div className="about-container">
       <div className="about-hero">
@@ -43,7 +45,7 @@ const About2 = () => {
           <p>
             Ready to start asking and answering? Join us and be part of a vibrant, supportive, and fun Q&A community!
           </p>
-          <button className="join-button">Get Started</button>
+          <button className="join-button" onClick={() => navigate('/questions')}>Get Started</button>
         </section>
 
         <section className="faq-section">

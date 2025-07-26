@@ -8,6 +8,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,6 +21,19 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    // Clear the form
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+    // Show success message
+    setShowSuccess(true);
+    // Hide success message after 3 seconds
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 3000);
   };
 
   return (
@@ -95,6 +109,11 @@ const Contact = () => {
           </div>
 
           <button type="submit" className="submit-btn">Send Message</button>
+          {showSuccess && (
+            <div className="success-message">
+              Message sent successfully! We'll get back to you soon.
+            </div>
+          )}
         </form>
       </div>
     </div>

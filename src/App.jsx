@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom'
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { auth } from './firebase';
 import Navbar from './components/Navbar';
-import Login from './components/Login';
+import Auth from './components/Auth';
 import Home from './pages/Home';
 import About from './pages/About2';
 import Questions from './pages/Questions';
@@ -12,31 +14,53 @@ import Contact from './pages/Contact';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
+  const [showAuth, setShowAuth] = useState(false);
+  const [user, setUser] = useState(null);
 
-  const handleLoginClick = () => setShowLogin(true);
-  const handleLogoutClick = () => setIsLoggedIn(false);
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+        setIsLoggedIn(true);
+      } else {
+        setUser(null);
+        setIsLoggedIn(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handleAuthClick = () => setShowAuth(true);
+  const handleLogoutClick = async () => {
+    try {
+      await signOut(auth);
+      setIsLoggedIn(false);
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
 
   return (
     <div>
       <Navbar
         isLoggedIn={isLoggedIn}
-        onLoginClick={handleLoginClick}
+        onLoginClick={handleAuthClick}
         onLogoutClick={handleLogoutClick}
       />
 
-      {showLogin && (
-        <Login
+      {showAuth && (
+        <Auth
           onLoginSuccess={() => {
             setIsLoggedIn(true);
-            setShowLogin(false);
+            setShowAuth(false);
           }}
-          onCancel={() => setShowLogin(false)}
+          onCancel={() => setShowAuth(false)}
         />
       )}
 
       <Routes>
-        <Route path="/" element={<Home isLoggedIn={isLoggedIn} onLoginClick={handleLoginClick} />} />
+        <Route path="/" element={<Home isLoggedIn={isLoggedIn} onLoginClick={handleAuthClick} />} />
         <Route path="/about" element={<About />} />
         <Route path="/questions" element={<Questions />} />
         <Route path="/answers/:id" element={<Answers />} />

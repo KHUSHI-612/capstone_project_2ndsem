@@ -79,13 +79,13 @@
   margin-right: auto;
 }
 
-.se-search-bar {
+.search-bar {
   display: flex;
   align-items: center;
   gap: 1rem;
   flex: 1;
 }
-.se-search-input {
+.search-input {
   flex: 1;
   padding: 1rem 1.5rem;
   border-radius: 1.2rem;
@@ -97,10 +97,10 @@
   box-shadow: none;
   transition: border 0.2s;
 }
-.se-search-input:focus {
+.search-input:focus {
   border: 1.5px solid #000;
 }
-.se-search-btn {
+.search-btn {
   background: #000 ;
   color: #fff ;
   border: none ;
@@ -112,22 +112,27 @@
   box-shadow: none ;
   transition: background 0.2s, box-shadow 0.2s !important;
 }
-.se-search-btn:hover {
+.search-btn:hover {
   background: #ccc !important;
   color: #000 !important;
   box-shadow: none !important;
 }
-.se-search-loading, .se-search-error {
+.search-loading, .search-error {
   color: #ccc;
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
-.se-search-results {
+.search-results,
+.search-result-item,
+.result-title-link {
+  color: #fff;
+}
+.search-results {
   list-style: none;
   padding: 0;
   margin: 0 0 2rem 0;
 }
-.se-search-result-item {
+.search-result-item {
   background: #181818;
   border-radius: 1rem;
   margin-bottom: 0.7rem;
@@ -137,26 +142,26 @@
   justify-content: space-between;
   box-shadow: none;
 }
-.se-result-title-btn {
+.result-title-link {
   background: none;
   border: none;
-  color: #000;
+  color: #fffefe;
   font-size: 1.08rem;
   font-weight: 600;
   cursor: pointer;
   text-align: left;
   flex: 1;
 }
-.se-result-title-btn:hover {
+.result-title-link:hover {
   text-decoration: underline;
   color: #333;
 }
-.se-result-meta {
+.result-meta {
   color: #888;
   font-size: 0.98rem;
   margin-left: 1.2rem;
 }
-.se-question-details {
+.question-details {
   background: #181818;
   border: 1.5px solid #333;
   border-radius: 1.2rem;
@@ -165,7 +170,7 @@
   color: #fff;
   position: relative;
 }
-.se-details-close {
+.details-close {
   position: absolute;
   top: 1.2rem;
   right: 1.2rem;
@@ -179,7 +184,7 @@
   cursor: pointer;
   transition: background 0.2s;
 }
-.se-details-close:hover {
+.details-close:hover {
   background: #000;
   color: #fff;
 }
@@ -333,6 +338,13 @@
   color: #fff;
 }
 
+.questions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 5.5rem;
+}
+
 @media (max-width: 900px) {
   .search-and-ask-row {
     flex-direction: column;
@@ -345,7 +357,7 @@
     margin-left: 0;
     margin-top: 0.5rem;
   }
-  .se-search-bar {
+  .search-bar {
     width: 100%;
   }
 }

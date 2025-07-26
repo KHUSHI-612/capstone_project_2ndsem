@@ -1,18 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./blog.css";
 
 const blogPosts = [
   {
     title: "How to Get Fast, Quality Answers to Your Questions",
     excerpt: "Learn proven strategies to write questions that attract quick and helpful responses from the community.",
-    date: "2024-06-10",
+    date: "2025-05-06",
     image: "/src/assets/blog1.jpg",
     link: "#"
   },
   {
     title: "Building Your Reputation: Tips for Becoming a Trusted Contributor",
     excerpt: "Discover how to earn trust, upvotes, and badges by providing valuable answers and engaging positively.",
-    date: "2024-06-05",
+    date: "2025-02-05",
     image: "/src/assets/blog2.jpg",
     link: "#"
   },
@@ -26,6 +27,7 @@ const blogPosts = [
 ];
 
 export default function Blog() {
+  const navigate = useNavigate();
   return (
     <div className="blog-container">
       <section className="blog-hero">
@@ -45,7 +47,7 @@ export default function Blog() {
                   <h3>{post.title}</h3>
                   <p className="blog-post-date">{post.date}</p>
                   <p className="blog-post-excerpt">{post.excerpt}</p>
-                  <a href={post.link} className="blog-post-link">Read More</a>
+                 
                 </div>
               </div>
             ))}
@@ -54,7 +56,7 @@ export default function Blog() {
         <section className="blog-cta-section">
           <h2>Want to Contribute?</h2>
           <p>Share your knowledge, tips, or stories with the community! Reach out to become a guest author or suggest a topic for our blog.</p>
-          <button className="blog-cta-button">Contact Us</button>
+          <button className="blog-cta-button" onClick={() => navigate('/contact')}>Contact Us</button>
         </section>
       </div>
     </div>
