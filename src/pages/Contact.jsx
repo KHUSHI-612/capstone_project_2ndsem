@@ -21,16 +21,16 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Clear the form
+
     setFormData({
       name: '',
       email: '',
       subject: '',
       message: ''
     });
-    // Show success message
+    
     setShowSuccess(true);
-    // Hide success message after 3 seconds
+
     setTimeout(() => {
       setShowSuccess(false);
     }, 3000);

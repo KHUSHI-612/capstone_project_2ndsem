@@ -42,31 +42,33 @@
 }
 
 .info-card {
-  background: #fffefe;
+  background: #181818;
   padding: 24px;
   border-radius: 16px;
   box-shadow: none;
   color: #ffffff;
+  border: 1px solid #333;
 }
 
 .info-card h3 {
-  color: #000000;
+  color: #ffffff;
   font-size: 19px;
   margin-bottom: 8px;
   font-weight: 600;
 }
 
 .info-card p {
-  color: #000000;
+  color: #cccccc;
   line-height: 1.6;
 }
 
 .contact-form {
-  background: #fffefe;
+  background: #181818;
   padding: 32px;
   border-radius: 16px;
   box-shadow: none;
   color: #fff;
+  border: 1px solid #333;
 }
 
 .form-group {
@@ -76,8 +78,12 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: #000000;
-  font-weight: 500;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  text-shadow: none;
+  filter: none;
+  transform: none;
 }
 
 .form-group input,
@@ -85,24 +91,33 @@
   width: 100%;
   padding: 13px;
   background: #000000;
-  color: #fffcfc;
+  color: #ffffff;
   border-radius: 8px;
   font-size: 16px;
-  transition: border-color 300ms, box-shadow 300ms;
+  transition: border-color 300ms;
   margin-bottom: 3px;
   border: 1px solid #ccc;
+  font-weight: 500;
+  text-shadow: none;
+  filter: none;
+  transform: none;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #000000;
+  color: #cccccc;
   opacity: 1;
+  font-weight: 400;
+  text-shadow: none;
+  filter: none;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(255,255,255,0.13);
+  box-shadow: none;
+  border-color: #ffffff;
+  background: #111111;
 }
 
 .submit-btn {
@@ -113,10 +128,12 @@
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: background 200ms, box-shadow 200ms;
+  transition: background 200ms;
   width: 100%;
   box-shadow: none;
   font-weight: 600;
+  text-shadow: none;
+  filter: none;
 }
 
 .submit-btn:hover {
