@@ -64,7 +64,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/questions" element={<Questions />} />
         <Route path="/answers/:id" element={<Answers />} />
-    
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

@@ -19,7 +19,7 @@ const Questions = () => {
     {
       id: 2,
       title: "Best practices for state management in large applications",
-      author: "Jane",
+      author: "riya",
       votes: 28,
       answers: 3,
       tags: ["react", "state-management", "redux"],
@@ -28,7 +28,7 @@ const Questions = () => {
     {
       id: 3,
       title: "Understanding React hooks and their use cases",
-      author: "xyz",
+      author: "khushi",
       votes: 35,
       answers: 7,
       tags: ["react", "hooks", "javascript"],
@@ -55,6 +55,22 @@ const Questions = () => {
     }
   }, [searchQuery]);
 
+  useEffect(() => {
+    try {
+      const storedQuestions = JSON.parse(localStorage.getItem('dynamicQuestions') || '[]');
+      if (storedQuestions.length > 0) {
+      
+        const existingIds = new Set(questions.map(q => q.id));
+        const newQuestions = storedQuestions.filter(q => !existingIds.has(q.id));
+        if (newQuestions.length > 0) {
+          setQuestions(prev => [...newQuestions, ...prev]);
+        }
+      }
+    } catch (error) {
+      console.error('Error loading from localStorage:', error);
+    }
+  }, []);
+
   const handleAddQuestion = (e) => {
     e.preventDefault();
     const newId = Math.max(...questions.map(q => q.id)) + 1;
@@ -65,15 +81,40 @@ const Questions = () => {
       votes: 0,
       answers: 0,
       tags: newQuestion.tags.split(',').map(tag => tag.trim()),
-      timestamp: "Just now"
+      timestamp: "Just now",
+      content: `Question: ${newQuestion.title}\n\nThis is a new question that was recently posted. Feel free to provide detailed answers and help the community!`
     };
+    
+
     setQuestions([question, ...questions]);
+    
+
+    try {
+      const existingQuestions = JSON.parse(localStorage.getItem('dynamicQuestions') || '[]');
+      const updatedQuestions = [question, ...existingQuestions];
+      localStorage.setItem('dynamicQuestions', JSON.stringify(updatedQuestions));
+    } catch (error) {
+      console.error('Error saving to localStorage:', error);
+    }
+    
     setNewQuestion({ title: '', tags: '' });
     setShowAddForm(false);
   };
 
   const handleDeleteQuestion = (id) => {
     setQuestions(questions.filter(q => q.id !== id));
+    
+
+    try {
+      const storedQuestions = JSON.parse(localStorage.getItem('dynamicQuestions') || '[]');
+      const updatedQuestions = storedQuestions.filter(q => q.id !== id);
+      localStorage.setItem('dynamicQuestions', JSON.stringify(updatedQuestions));
+      
+
+      localStorage.removeItem(`answers_${id}`);
+    } catch (error) {
+      console.error('Error removing from localStorage:', error);
+    }
   };
 
   const handleQuestionClick = (id) => {
@@ -159,7 +200,7 @@ const Questions = () => {
                 id="tags"
                 value={newQuestion.tags}
                 onChange={(e) => setNewQuestion({...newQuestion, tags: e.target.value})}
-                placeholder="react, javascript, web-development"
+                placeholder="tags"
               />
             </div>
             <div className="form-actions">

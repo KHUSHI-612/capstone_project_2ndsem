@@ -124,8 +124,22 @@
 .answers-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+}
+
+.no-answers {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  border: 2px dashed #dee2e6;
+}
+
+.no-answers p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin: 0;
+  font-style: italic;
 }
 
 .answer-card {

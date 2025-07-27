@@ -23,17 +23,17 @@ const About2 = () => {
           <h2>Our Values</h2>
           <div className="values-grid">
             <div className="value-card">
-              <span className="value-icon" role="img" aria-label="Community">🤝</span>
+              <span className="value-icon" >🤝</span>
               <h3>Community</h3>
               <p>We believe in the power of people helping people. Our platform is built for collaboration and support.</p>
             </div>
             <div className="value-card">
-              <span className="value-icon" role="img" aria-label="Curiosity">🔍</span>
+              <span className="value-icon">🔍</span>
               <h3>Curiosity</h3>
               <p>We encourage asking questions and exploring new ideas. Curiosity drives learning and growth.</p>
             </div>
             <div className="value-card">
-              <span className="value-icon" role="img" aria-label="Fun">🎉</span>
+              <span className="value-icon">🎉</span>
               <h3>Fun</h3>
               <p>Learning should be enjoyable! We strive to make Q&A engaging and rewarding for everyone.</p>
             </div>
