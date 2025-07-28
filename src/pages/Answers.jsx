@@ -50,14 +50,14 @@ const Answers = () => {
       {
         id: 1,
         content: "To implement authentication in React, you can use various libraries like Firebase Auth, Auth0, or implement your own solution using JWT tokens. Here's a basic example using Firebase...",
-        author: "Alex Thompson",
+        author: "user56",
         votes: 15,
         timestamp: "1 hour ago"
       },
       {
         id: 2,
         content: "Another approach is to use Next.js with its built-in authentication support. It provides a secure way to handle authentication with various providers...",
-        author: "Sarah Wilson",
+        author: "secret_user",
         votes: 8,
         timestamp: "2 hours ago"
       }
@@ -66,14 +66,14 @@ const Answers = () => {
       {
         id: 1,
         content: "For large applications, I recommend using Redux Toolkit or Zustand. Redux Toolkit simplifies Redux setup and reduces boilerplate code...",
-        author: "Mike Johnson",
+        author: "krish",
         votes: 12,
         timestamp: "3 hours ago"
       },
       {
         id: 2,
         content: "Consider using React Query for server state and Zustand for client state. This combination works well for complex applications...",
-        author: "Lisa Chen",
+        author: "Lisa",
         votes: 9,
         timestamp: "4 hours ago"
       }
@@ -82,7 +82,7 @@ const Answers = () => {
       {
         id: 1,
         content: "useState is for local component state, useEffect for side effects, useContext for sharing data across components. Start with useState and useEffect...",
-        author: "David Kim",
+        author: "David",
         votes: 18,
         timestamp: "6 hours ago"
       },
