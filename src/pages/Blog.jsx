@@ -20,7 +20,7 @@ const blogPosts = [
   {
     title: "Moderation Matters: Keeping Our Community Safe and Supportive",
     excerpt: "Explore the importance of moderation, reporting, and how you can help maintain a welcoming environment.",
-    date: "2024-05-28",
+    date: "2025-05-28",
     image: "/src/assets/blog3.jpg",
 
   }
