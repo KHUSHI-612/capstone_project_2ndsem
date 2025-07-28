@@ -8,21 +8,21 @@ const blogPosts = [
     excerpt: "Learn proven strategies to write questions that attract quick and helpful responses from the community.",
     date: "2025-05-06",
     image: "/src/assets/blog1.jpg",
-    link: "#"
+
   },
   {
     title: "Building Your Reputation: Tips for Becoming a Trusted Contributor",
     excerpt: "Discover how to earn trust, upvotes, and badges by providing valuable answers and engaging positively.",
     date: "2025-02-05",
     image: "/src/assets/blog2.jpg",
-    link: "#"
+
   },
   {
     title: "Moderation Matters: Keeping Our Community Safe and Supportive",
     excerpt: "Explore the importance of moderation, reporting, and how you can help maintain a welcoming environment.",
     date: "2024-05-28",
     image: "/src/assets/blog3.jpg",
-    link: "#"
+
   }
 ];
 

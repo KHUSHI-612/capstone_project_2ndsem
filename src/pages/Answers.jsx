@@ -10,7 +10,7 @@ const Answers = () => {
   const [answers, setAnswers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Mock questions data - in a real app, this would come from a database
+
   const questionsData = [
     {
       id: 1,
